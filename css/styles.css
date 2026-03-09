@@ -434,6 +434,7 @@ gap: 16px;
 flex-direction: row;
 }
 /* #endregion */
+/* #region modal-overlay */
 .modal-overlay {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
@@ -446,7 +447,7 @@ flex-direction: row;
     z-index: 999;
     justify-content: center;
     align-items: center;
-    opacity: 1;
+    opacity: 0;
     pointer-events: none;
 }
 .modal {
@@ -524,3 +525,56 @@ flex-direction: row;
     text-decoration: underline;
     color: blue;
 }
+/* #endregion */
+/* #region footer-form */
+.subscription {
+    display: flex;
+    
+}
+.footer-subscription-p {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: normal;
+    margin-bottom: 16px;
+}
+.footer-email {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    padding: 0 16px;
+    margin-right: 24px;
+    background-color: #2e2f42;
+    color: #FFF;
+}
+.footer-email::placeholder {
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+    font-size: 12px;
+}
+.subscription-button {
+    background-color: #4D5AE5;
+    border-radius: 4px;
+    /*padding: 8px 24px;*/
+    width: 165px;
+    height: 40px;
+    
+}
+.button-text {
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;    
+    align-items: center;
+    justify-content: center;
+    /*right: 64px;
+    left: 24px;*/
+    padding-left: 24px;
+    padding-right: 64px;
+}
+/* #region body */
