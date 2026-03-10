@@ -395,11 +395,16 @@ footer {
 }
 .footer {
     display: flex;
-    gap: 120px;
+    /*gap: 120px;*/
     align-items: baseline
 }
 .footer-socials {
     gap: 16px;
+    margin-right: 80px;
+}
+.footer-logo {
+    gap: 16px;
+    margin-right: 120px;
 }
 .icon-bg-footer {
     width: 40px;
@@ -477,7 +482,7 @@ flex-direction: row;
 }
 .backdrop.is-open {
     opacity: 1;
-    pointer-events: visible;
+    pointer-events: all;
     visibility: initial;
 }
 .modal {
@@ -537,12 +542,12 @@ flex-direction: row;
     border-color: #4d5ae5;
 }
 .order-service-textarea {
-    margin-top: 4px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     width: 100%;
     height: 120px;
     padding: 8px 16px;
+    margin-bottom: 8px;
     resize: none;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -585,8 +590,6 @@ flex-direction: row;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 100%;
     background-color: #e7e9fc;
-    /*stroke-width: 1px;
-        stroke: rgba(0, 0, 0, 0.1);*/
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -595,10 +598,15 @@ flex-direction: row;
     right: 24px;
     fill: #2E2F42;
 }
-.modal-close-button:hover {
+.modal-close-button:hover,
+.modal-close-button:focus {
     background-color: #404bbf;
+}
+.modal-close-button:hover .modal-button-icon,
+.modal-close-button:focus .modal-button-icon {
     fill: #FFF;
-}/*
+}
+/*
 .modal-button-icon {
     fill: #2E2F42;
 }
@@ -644,7 +652,7 @@ flex-direction: row;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox:checked + .checkbox-toggler {
-    background-color: #4D5AE5;
+    background-color: #404bbf;
     border-color: transparent;
 }
 .checkbox:checked + .checkbox-toggler > .custom-checkbox {
@@ -663,7 +671,7 @@ flex-direction: row;
 background-color: #4D5AE5;
 color: #FFFFFF;
 width: 169px;
-height: 100%;
+height: 56px;
 font-family: inherit;
 cursor: pointer;
 font-weight: 500;
@@ -767,5 +775,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .footer-subscription {
     display: flex;
     flex-direction: column;
+}
+.Subscribe-wrapper {
+    display: block;
+    margin-bottom: 16px;
 }
 /* #endregion */
