@@ -512,7 +512,6 @@ flex-direction: row;
     color: #8e8f99;
     font-weight: 400;
     font-size: 12px;
-    margin-bottom: 8px;
     display: block;
     line-height: 1.16667;
     letter-spacing: 0.04em;
@@ -547,6 +546,7 @@ flex-direction: row;
     width: 100%;
     height: 120px;
     padding: 8px 16px;
+    margin-top: 4px;
     margin-bottom: 8px;
     resize: none;
     outline: none;
@@ -597,6 +597,8 @@ flex-direction: row;
     top: 24px;
     right: 24px;
     fill: #2E2F42;
+    transition-property: fill, background-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-button:hover,
 .modal-close-button:focus {
@@ -717,6 +719,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     flex-basis: 264px;
 }
 .footer-email {
+    font-size: 12px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     border: 1px solid #fff;
     border-radius: 4px;
@@ -739,7 +742,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 12px;
 }
 .subscription-button {
-    position: relative;
+    border: none;
+    display: flex;
     background-color: #4D5AE5;
     border-radius: 4px;
     /*padding: 8px 24px;*/
@@ -762,15 +766,12 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     justify-content: center;
     /*right: 64px;
-    left: 24px;*/
-    padding: 8px 64px 8px 24px;
+    left: 24px;
+    padding: 8px 64px 8px 24px;*/
 }
 .button-icon {
     fill: #f4f4fd;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%) translateX(500%);
+    margin-left: 16px;
 }
 .footer-subscription {
     display: flex;
@@ -779,5 +780,6 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 .Subscribe-wrapper {
     display: block;
     margin-bottom: 16px;
+    margin-left: auto
 }
 /* #endregion */
