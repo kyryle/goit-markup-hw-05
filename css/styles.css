@@ -473,9 +473,9 @@ flex-direction: row;
     justify-content: center;
     align-items: center;
 
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
+    opacity: 1;
+    pointer-events: all;
+    visibility: initial;
 
     transition-property: opacity, visibility;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -547,7 +547,7 @@ flex-direction: row;
     height: 120px;
     padding: 8px 16px;
     margin-top: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     resize: none;
     outline: none;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -710,8 +710,8 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     color: #FFF;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: normal;
-    line-height: normal;
+    letter-spacing: 0.02em;
+    line-height: 1.5;
     padding-bottom: 16px;
     display: block;
 }
