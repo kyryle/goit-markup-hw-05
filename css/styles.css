@@ -8,7 +8,10 @@ body {
     line-height: 1.5;
     font-weight: normal;
 }
-body:has(.backdrop.is-open) {
+/*body:has(.backdrop.is-open) {
+    overflow-y: hidden;
+}*/
+body.is-open {
     overflow-y: hidden;
 }
 h1 {
@@ -98,8 +101,7 @@ header {
 }
 address {
     font-style: normal;
-    margin: 0 0 24px auto;
-    padding-top: 24px;
+    margin-left: auto;
 }
 .container-header {
     display: flex;
@@ -107,14 +109,10 @@ address {
 .flex-header {
     display: flex;
     gap: 40px;
-    margin: 0 24px 24px 24px;
-    padding-top: 24px;
 }
 .flex-nav {
     display: flex;
     gap: 40px;
-    margin: 0 24px 24px 24px;
-    padding-top: 24px;
 }
 .link {
 font-weight: 500;
@@ -179,8 +177,8 @@ transition-duration: 250ms;
     font-size: 18px;
     letter-spacing: 0.03em;
     line-height: 1.16667;
-    margin: 0 24px 24px 24px;
-    padding: 24px 76px 0 0;
+    margin-right: 76px;
+    padding-top: 24px;
 }
 .span-header {
     color: #4d5ae5;
@@ -369,7 +367,6 @@ padding: 40px 32px;
     color: #F4F4FD;
     margin-top: 16px;
     max-width: 264px;
-    padding-bottom: 16px;
 }
 footer {
     background-color: #2E2F42;
@@ -493,6 +490,15 @@ flex-direction: row;
     padding: 72px 24px 24px 24px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.backdrop.is-open > .modal {
+    opacity: 1;
+    pointer-events: all;
+    visibility: initial;
 }
 .order-service-wrapper {
     margin-bottom: 8px;
@@ -712,7 +718,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.5;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
     display: block;
 }
 .footer-email-label {
